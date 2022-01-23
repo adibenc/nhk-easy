@@ -17,6 +17,7 @@ arr = [
     "# 2022",
     "# " + $(".article-main__title").text().trim(),
     "# " +$(".article-main__date").text().trim(),
+    window.location.href,
     $(".article-main__body").text().trim()
 ]
 
@@ -26,5 +27,14 @@ vocstr = ""
 Object.keys(vocab).forEach((e,i)=>{
     vocstr += [e, vocab[e]].join(": ") + "\n"
 })
-console.log(vocstr)
+except = `災害,: さいがい
+気,: き
+外国人,: がいこくじん
+皆,: みな
+小学生,: しょうがくせい
+中学生,: ちゅうがくせい
+伝,: つた`
+console.log("```\n"+vocstr.replace(except,"")+"\n```")
+// except = `災害,: さいがい
+// 気,: き`
 ```
